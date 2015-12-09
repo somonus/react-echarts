@@ -13,15 +13,21 @@
     "email": "guiqi.zh@gmail.com"
   },
   "homepage": "https://github.com/somonus/react-echarts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/somonus/react-echarts.git"
+  },
   "main": "lib/index.js",
-  "licenses": [
+  "license": [
     {
       "type": "MIT",
       "url": "http://mit-license.org"
     }
   ],
   "dependencies": {
-    "echarts": "2.2.8"
+    "echarts": "2.2.8",
+    "react": "0.14.2",
+    "react-dom": "0.14.2"
   },
   "devDependencies": {
     "babel": "5.8.23",
@@ -36,5 +42,8 @@
     "eslint-config-airbnb": "0.1.0",
     "eslint-loader": "1.0.0",
     "eslint-plugin-react": "3.5.0"
+  },
+  "scripts": {
+    "build": "rm -rf lib && node_modules/.bin/babel src --out-dir lib"
   }
 }

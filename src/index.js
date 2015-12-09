@@ -1,9 +1,9 @@
-import ChartLine from './component/Line';
-import ChartPie from './component/Pie';
-import ChartBar from './component/Bar';
-import ChartCloud from './component/Cloud';
-import ChartMap from './component/Map';
-import Chart from './component/Chart';
+import ChartLine from './components/Line';
+import ChartPie from './components/Pie';
+import ChartBar from './components/Bar';
+import ChartCloud from './components/Cloud';
+import ChartMap from './components/Map';
+import Chart from './components/Chart';
 
 Chart.Line = ChartLine;
 Chart.Pie = ChartPie;
