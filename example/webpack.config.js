@@ -1,8 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
-
-var babelrc = fs.readFileSync('../.babelrc');
+var babelrc = fs.readFileSync(path.join(__dirname, '../.babelrc'));
 var babelLoaderQuery = {};
 
 try {
@@ -28,7 +27,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './app'
+    path.join(__dirname, './app')
   ],
   output: {
     path: path.join(__dirname, 'debug'),

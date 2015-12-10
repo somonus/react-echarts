@@ -22,6 +22,14 @@ const myChart = React.creatClass({
 ReactDOM.render(<myChart />, container);
 ```
 
+##Example
+
+```
+npm install
+npm start
+```
+open [http://localhost:8080/](http://localhost:8080/)
+
 ## License
 
 rc-echarts is released under the MIT license.

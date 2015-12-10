@@ -50,6 +50,6 @@
   },
   "scripts": {
     "build": "rm -rf lib && node_modules/.bin/babel src --out-dir lib",
-    "start": "webpack-dev-server --hot --progress --colors"
+    "start": "node example/server.js"
   }
 }
