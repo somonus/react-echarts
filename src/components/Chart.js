@@ -64,6 +64,8 @@ export default class Chart extends Component {
         'data',
         'markPoint',
         'markLine',
+        'stack',
+        'smooth',
       ].map((key) => {
         const option = child.props[key];
         if (option) {
