@@ -66,6 +66,8 @@ export default class Chart extends Component {
         'markLine',
         'stack',
         'smooth',
+        'mapType',
+        'selectedMode',
       ].map((key) => {
         const option = child.props[key];
         if (option) {
@@ -79,7 +81,6 @@ export default class Chart extends Component {
 
   drawChart() {
     const node = this.refs.chart;
-    const chart = echarts.init(node);
     const options = {};
     [
       'backgroundColor',
@@ -105,7 +106,8 @@ export default class Chart extends Component {
       }
     });
     this.getChartData(options);
-    chart.setOption(options);
+    this.chart = echarts.init(node);
+    this.chart.setOption(options);
   }
 
   renderChildren() {

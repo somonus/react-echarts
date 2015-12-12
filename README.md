@@ -7,7 +7,7 @@ $ npm install rc-echarts
 ## Usage
 
 ```js
-import Chart from 'rc-calendar';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
