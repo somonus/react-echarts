@@ -7,16 +7,16 @@ $ npm install rc-echarts
 ## Usage
 
 ```js
-import Chart from 'rc-echarts';
+import Charts from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
-        <Chart.Line {...series} />
-        <Chart.Line {...series1} />
-    </Chart>
+    <Charts {...option} >
+        <Charts.Line {...series} />
+        <Charts.Line {...series1} />
+    </Charts>
   }
 })
 ReactDOM.render(<myChart />, container);
