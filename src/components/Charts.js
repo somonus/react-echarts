@@ -110,7 +110,7 @@ export default class Charts extends Component {
     // 不阻断页面渲染，在页面渲染完成后再进行图表的渲染
     setTimeout(()=>{
       this.chart.setOption(options);
-    }, 200);
+    }, 0);
   }
 
   renderChildren() {
