@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Charts from '../../src';
+import Chart from '../../src';
 
 export default class App extends Component {
   render() {
     return (
-      <Charts
+      <Chart
         legend={{
           data: ['最高气温', '最低气温']
         }}
@@ -23,13 +23,13 @@ export default class App extends Component {
             }
           }
         ]}>
-        <Charts.Line
+        <Chart.Line
           name="最高气温"
           data={[11, 11, 15, 13, 12, 13, 10]}/>
-        <Charts.Line
+        <Chart.Line
           name="最低气温"
           data={[1, -2, 2, 5, 3, 2, 0]}/>
-      </Charts>
+      </Chart>
     );
   }
 }

@@ -1,15 +1,16 @@
+import Series from './components/Series';
 import ChartLine from './components/Line';
 import ChartPie from './components/Pie';
 import ChartBar from './components/Bar';
 import ChartCloud from './components/Cloud';
 import ChartMap from './components/Map';
-import Charts from './components/Charts';
-export Chart from './components/Chart';
+import Chart from './components/Chart';
 
-Charts.Line = ChartLine;
-Charts.Pie = ChartPie;
-Charts.Bar = ChartBar;
-Charts.Cloud = ChartCloud;
-Charts.Map = ChartMap;
+Chart.Series = Series;
+Chart.Line = ChartLine;
+Chart.Pie = ChartPie;
+Chart.Bar = ChartBar;
+Chart.Cloud = ChartCloud;
+Chart.Map = ChartMap;
 
-export default Charts;
+export default Chart;
