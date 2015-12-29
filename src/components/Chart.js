@@ -22,7 +22,7 @@ export default class Charts extends Component {
     roamController: React.PropTypes.object,
     grid: React.PropTypes.object,
     color: React.PropTypes.array,
-    children: React.PropTypes.node.isRequired,
+    children: React.PropTypes.node,
     xAxis: React.PropTypes.oneOfType([
       React.PropTypes.object,
       React.PropTypes.array,
