@@ -8,7 +8,7 @@ export default class ChartBase extends Component {
   constructor(props) {
     super(props);
     if (this.props.hasChart !== true) {
-      throw new Error('不要瞎搞');
+      throw new Error('There is no Chart wrapper.');
     }
   }
 

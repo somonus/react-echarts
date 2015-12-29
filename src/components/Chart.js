@@ -10,6 +10,8 @@ export default class Charts extends Component {
     animation: React.PropTypes.bool,
     calculable: React.PropTypes.bool,
     renderAsImage: React.PropTypes.bool,
+    style: React.PropTypes.object,
+    theme: React.PropTypes.object,
     timeline: React.PropTypes.object,
     title: React.PropTypes.object,
     toolbox: React.PropTypes.object,
@@ -29,10 +31,14 @@ export default class Charts extends Component {
       React.PropTypes.object,
       React.PropTypes.array,
     ]),
+    onReady: React.PropTypes.func,
   };
 
   static defaultProps = {
     height: 400,
+    yAxis: [{
+      type: 'value',
+    }],
   };
 
   constructor(props) {
@@ -40,37 +46,23 @@ export default class Charts extends Component {
   }
 
   componentDidMount() {
+    const { onReady } = this.props;
     this.drawChart();
+    if (onReady) onReady(this.chart);
   }
 
   componentDidUpdate() {
     this.drawChart();
   }
 
+  componentWillUnmount() {
+    this.chart.dispose();
+  }
+
   getChartData(options) {
     options.series = [];
     React.Children.map(this.props.children, (child) => {
-      const series = filterMap([
-        'type',
-        'zlevel',
-        'z',
-        'name',
-        'size',
-        'textRotation',
-        'autoSize',
-        'textPadding',
-        'tooltip',
-        'clickable',
-        'itemStyle',
-        'data',
-        'markPoint',
-        'markLine',
-        'stack',
-        'smooth',
-        'mapType',
-        'selectedMode',
-      ], child.props);
-      options.series.push(series);
+      options.series.push({...child.props});
     });
   }
 
@@ -97,7 +89,7 @@ export default class Charts extends Component {
     ], this.props);
     this.getChartData(options);
     this.chart = echarts.init(node);
-    this.chart.setOption(options);
+    this.chart.setOption(options, this.props.theme);
   }
 
   renderChildren() {
@@ -109,14 +101,16 @@ export default class Charts extends Component {
   }
 
   render() {
-    const { width, height } = this.props;
+    const { width, height, style, ...props } = this.props;
     return (
       <div
         ref="chart"
         style={{
           height,
-          width
-        }}>
+          width,
+          ...style,
+        }}
+        {...props}>
         {this.renderChildren()}
       </div>
     );
