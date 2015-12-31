@@ -36,9 +36,6 @@ export default class Charts extends Component {
 
   static defaultProps = {
     height: 400,
-    yAxis: [{
-      type: 'value',
-    }],
   };
 
   constructor(props) {
@@ -51,7 +48,8 @@ export default class Charts extends Component {
     if (onReady) onReady(this.chart);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
+    if (prevProps.children.props.data === this.props.children.props.data) return;
     this.drawChart();
   }
 

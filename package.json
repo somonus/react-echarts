@@ -1,6 +1,6 @@
 {
   "name": "rc-echarts",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "react echarts",
   "keywords": [
     "react",
@@ -26,8 +26,8 @@
   ],
   "dependencies": {
     "echarts": "2.2.8",
-    "react": "0.14.2",
-    "react-dom": "0.14.2"
+    "react": ">=0.14.2",
+    "react-dom": ">=0.14.2"
   },
   "devDependencies": {
     "babel": "5.8.23",
