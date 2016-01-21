@@ -49,8 +49,17 @@ export default class Charts extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.children.props.data === this.props.children.props.data) return;
-    this.drawChart();
+   if(prevProps.children instanceof Array){
+      for(var i=0;i<prevProps.children.length;i++){
+        if (!(prevProps.children[i].props.data === this.props.children[i].props.data)){
+          this.drawChart();
+          return;
+        }
+      }
+    }else{
+      if (prevProps.children.props.data === this.props.children.props.data) return;
+      this.drawChart();
+    }
   }
 
   componentWillUnmount() {
