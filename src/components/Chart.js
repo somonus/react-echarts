@@ -49,17 +49,13 @@ export default class Charts extends Component {
   }
 
   componentDidUpdate(prevProps) {
-   if(prevProps.children instanceof Array){
-      for(var i=0;i<prevProps.children.length;i++){
-        if (!(prevProps.children[i].props.data === this.props.children[i].props.data)){
-          this.drawChart();
-          return;
-        }
+    const prevPropsArray = React.Children.map(prevProps.children, (preChild) => preChild.props);
+    const propsArray = React.Children.map(this.props.children, (child) => child.props);
+    propsArray.map((props, index) => {
+      if (props !== prevPropsArray[index]) {
+        this.drawChart();
       }
-    }else{
-      if (prevProps.children.props.data === this.props.children.props.data) return;
-      this.drawChart();
-    }
+    });
   }
 
   componentWillUnmount() {
@@ -74,6 +70,7 @@ export default class Charts extends Component {
   }
 
   drawChart() {
+    console.log(2)
     const node = this.refs.chart;
     const options = filterMap([
       'backgroundColor',
