@@ -6,7 +6,7 @@ $ npm install rc-echarts
 
 ## Usage
 
-注：以下示例中，option为echarts官方的option选项，series为echarts官方series的选项
+注：以下示例中，option为echarts官方的option选项，详见(文档)[http://echarts.baidu.com/echarts2/doc/doc.html#Option]。series为echarts官方series的选项，详见(文档)[http://echarts.baidu.com/echarts2/doc/doc.html#Series]
 
 *折线图*
 ```js
@@ -157,6 +157,8 @@ ReactDOM.render(<myChart />, container);
 ```
 
 ##Example
+
+*运行demo*
 
 ```
 npm install
