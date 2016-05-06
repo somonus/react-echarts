@@ -158,7 +158,7 @@ ReactDOM.render(<myChart />, container);
 
 ##Example
 
-*运行demo*
+*run demo*
 
 ```
 npm install
