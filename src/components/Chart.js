@@ -1,5 +1,5 @@
 import React, { Component, cloneElement } from 'react';
-import echarts from 'echarts/echarts';
+import echarts from 'echarts';
 import filterMap from '../utils/filterMap';
 
 export default class Charts extends Component {

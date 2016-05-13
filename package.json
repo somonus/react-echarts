@@ -25,7 +25,7 @@
     }
   ],
   "dependencies": {
-    "echarts": "2.2.8"
+    "echarts": "3.1.9"
   },
   "peerDependencies": {
     "react": ">=0.14.2",
