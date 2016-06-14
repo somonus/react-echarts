@@ -7,6 +7,9 @@ $ npm install rc-echarts
 ## Usage
 
 ###用法一
+
+完全和echarts一致，将echarts的options传给组件。
+
 ```js
 import Chart from 'rc-echart';
 import React from 'react';
@@ -22,7 +25,10 @@ ReactDOM.render(<myChart />, container);
 ```
 
 ###用法二
-注：以下示例中，option为echarts官方的option选项，详见[文档](http://echarts.baidu.com/options.html)。series为echarts官方series的选项，详见[文档](http://echarts.baidu.com/options.html#series)
+
+将options中的series抽离成单独的react组件。
+
+注：以下示例中，options为echarts官方的options除了series的所有选项，详见[文档](http://echarts.baidu.com/options.html)。series为echarts官方series的选项，详见[文档](http://echarts.baidu.com/options.html#series)
 
 *折线图*
 ```js
