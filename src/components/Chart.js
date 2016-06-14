@@ -45,17 +45,25 @@ export default class Charts extends Component {
   componentDidMount() {
     const { onReady } = this.props;
     this.drawChart();
-    if (onReady) onReady(this.chart);
+    if (onReady) {
+      onReady(this.chart);
+    }
   }
 
   componentDidUpdate(prevProps) {
-    const prevPropsArray = React.Children.map(prevProps.children, (preChild) => preChild.props);
-    const propsArray = React.Children.map(this.props.children, (child) => child.props);
-    propsArray.map((props, index) => {
-      if (props !== prevPropsArray[index]) {
+    if (this.props.options) {
+      if (prevProps.options !== this.props.options) {
         this.drawChart();
       }
-    });
+    } else {
+      const prevPropsArray = React.Children.map(prevProps.children, (preChild) => preChild.props);
+      const propsArray = React.Children.map(this.props.children, (child) => child.props);
+      propsArray.map((props, index) => {
+        if (props !== prevPropsArray[index]) {
+          this.drawChart();
+        }
+      });
+    }
   }
 
   componentWillUnmount() {

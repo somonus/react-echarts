@@ -20,7 +20,6 @@ export default class App extends Component {
     const options = {
       title : {
         text: '某站点用户访问来源',
-        subtext: '纯属虚构',
         x:'center'
       },
       tooltip : {
