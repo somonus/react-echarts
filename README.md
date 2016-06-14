@@ -8,7 +8,7 @@ $ npm install rc-echarts
 
 ###用法一
 
-完全和echarts一致，将echarts的options传给组件。
+完全和echarts一致，将echarts的options传给组件。通过onReady能获取到echarts对象，从而进行绑定事件等一系列操作。
 
 ```js
 import Chart from 'rc-echart';
@@ -16,8 +16,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
+  ready(echart) {
+    console.log(echart);
+    echart.on('click', (params)=>{
+      console.log(params);
+      alert("click");
+    });
+  }
+
   render() {
-    <Chart options={ options } />
+    <Chart options={ options } onReady={this.ready} />
   }
 })
 ReactDOM.render(<myChart />, container);
