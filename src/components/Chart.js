@@ -70,28 +70,32 @@ export default class Charts extends Component {
   }
 
   drawChart() {
-    console.log(2)
     const node = this.refs.chart;
-    const options = filterMap([
-      'backgroundColor',
-      'animation',
-      'calculable',
-      'renderAsImage',
-      'timeline',
-      'title',
-      'toolbox',
-      'tooltip',
-      'legend',
-      'dataRange',
-      'dataZoom',
-      'roamController',
-      'grid',
-      'color',
-      'xAxis',
-      'yAxis',
-      'series',
-    ], this.props);
-    this.getChartData(options);
+    let options;
+    if (this.props.options) {
+      options = this.props.options;
+    } else {
+      options = filterMap([
+        'backgroundColor',
+        'animation',
+        'calculable',
+        'renderAsImage',
+        'timeline',
+        'title',
+        'toolbox',
+        'tooltip',
+        'legend',
+        'dataRange',
+        'dataZoom',
+        'roamController',
+        'grid',
+        'color',
+        'xAxis',
+        'yAxis',
+        'series',
+      ], this.props);
+      this.getChartData(options);
+    }
     this.chart = echarts.init(node);
     this.chart.setOption(options, this.props.theme);
   }

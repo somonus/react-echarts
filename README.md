@@ -6,7 +6,23 @@ $ npm install rc-echarts
 
 ## Usage
 
-注：以下示例中，option为echarts官方的option选项，详见[文档](http://echarts.baidu.com/option.html)。series为echarts官方series的选项，详见[文档](http://echarts.baidu.com/option.html#series)
+###用法一
+```js
+import Chart from 'rc-echart';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const myChart = React.creatClass({
+  render() {
+    <Chart options={ options } />
+  }
+})
+ReactDOM.render(<myChart />, container);
+
+```
+
+###用法二
+注：以下示例中，option为echarts官方的option选项，详见[文档](http://echarts.baidu.com/options.html)。series为echarts官方series的选项，详见[文档](http://echarts.baidu.com/options.html#series)
 
 *折线图*
 ```js
@@ -16,7 +32,7 @@ import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
+    <Chart {...options} >
         <Chart.Line {...series} />
         <Chart.Line {...series1} />
     </Chart>
@@ -34,7 +50,7 @@ import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
+    <Chart {...options} >
         <Chart.Bar {...series} />
     </Chart>
   }
@@ -50,7 +66,7 @@ import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
+    <Chart {...options} >
         <Chart.Pie {...series} />
     </Chart>
   }
@@ -66,7 +82,7 @@ import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
+    <Chart {...options} >
         <Chart.Cloud {...series} />
     </Chart>
   }
@@ -82,7 +98,7 @@ import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
+    <Chart {...options} >
         <Chart.Map {...series} />
     </Chart>
   }
@@ -100,7 +116,7 @@ import ReactDOM from 'react-dom';
 
 const myChart = React.creatClass({
   render() {
-    <Chart {...option} >
+    <Chart {...options} >
         <Chart.Series {...series} type="line" />
     </Chart>
   }
