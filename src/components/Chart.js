@@ -51,9 +51,14 @@ export default class Charts extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    const { onReady } = this.props;
+    
     if (this.props.options) {
       if (prevProps.options !== this.props.options) {
         this.drawChart();
+        if (onReady) {
+          onReady(this.chart);
+        }
       }
     } else {
       const prevPropsArray = React.Children.map(prevProps.children, (preChild) => preChild.props);
@@ -61,6 +66,9 @@ export default class Charts extends Component {
       propsArray.map((props, index) => {
         if (props !== prevPropsArray[index]) {
           this.drawChart();
+          if (onReady) {
+            onReady(this.chart);
+          }
         }
       });
     }
