@@ -5,6 +5,7 @@ import Line from './line';
 import Bar from './bar';
 import Pie from './pie';
 import Graph from './graph';
+import Scatter from './scatter';
 
 ReactDOM.render((
   <Router>
@@ -12,6 +13,7 @@ ReactDOM.render((
     <Route path="/bar" component={Bar} />
     <Route path="/pie" component={Pie} />
     <Route path="/graph" component={Graph} />
+    <Route path="/scatter" component={Scatter} />
   </Router>
 ), document.getElementById('chart'));
 
