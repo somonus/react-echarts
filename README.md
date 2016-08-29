@@ -11,7 +11,7 @@ $ npm install rc-echarts
 完全和echarts一致，将echarts的options传给组件。通过onReady能获取到echarts对象，从而进行绑定事件等一系列操作。
 
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -36,11 +36,11 @@ ReactDOM.render(<myChart />, container);
 
 将options中的series抽离成单独的react组件。
 
-注：以下示例中，options为echarts官方的options除了series的所有选项，详见[文档](http://echarts.baidu.com/options.html)。series为echarts官方series的选项，详见[文档](http://echarts.baidu.com/options.html#series)
+注：以下示例中，options为echarts官方的options除了series的所有选项，详见[文档](http://echarts.baidu.com/option.html)。series为echarts官方series的选项，详见[文档](http://echarts.baidu.com/option.html#series)
 
 *折线图*
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -58,7 +58,7 @@ ReactDOM.render(<myChart />, container);
 
 *柱状图*
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -74,7 +74,7 @@ ReactDOM.render(<myChart />, container);
 
 *饼图*
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -90,7 +90,7 @@ ReactDOM.render(<myChart />, container);
 
 *标签云图*
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -106,7 +106,7 @@ ReactDOM.render(<myChart />, container);
 
 *地图*
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -124,7 +124,7 @@ ReactDOM.render(<myChart />, container);
 如果想要导入非前面几种类型的图表，可使用Chart.Series。自己指定类型。
 
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -143,7 +143,7 @@ ReactDOM.render(<myChart />, container);
 可使用onReady属性来获取echarts对象，对其进行官方提供的各种操作，如绑定事件等。
 
 ```js
-import Chart from 'rc-echart';
+import Chart from 'rc-echarts';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
