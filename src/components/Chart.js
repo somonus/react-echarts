@@ -112,7 +112,10 @@ export default class Charts extends Component {
       ], this.props);
       this.getChartData(options);
     }
-    this.chart = echarts.init(node);
+    const chart = echarts.getInstanceByDom(node);
+    if (!chart) {
+      this.chart = echarts.init(node);
+    }
     this.chart.setOption(options, this.props.theme);
   }
 
