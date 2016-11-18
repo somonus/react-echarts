@@ -2,7 +2,6 @@
 
 [![NPM Version](https://img.shields.io/npm/v/rc-echarts.svg?style=flat)](https://www.npmjs.org/package/rc-echarts)
   [![npm](https://img.shields.io/npm/dm/rc-echarts.svg?style=flat)](https://www.npmjs.org/package/rc-echarts)
-  [![License](http://img.shields.io/npm/l/rc-echarts.svg?style=flat)](https://raw.githubusercontent.com/somonus/rc-echarts/master/LICENSE)
   
 ## install
 
